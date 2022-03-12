@@ -22,4 +22,13 @@
         </activity>
     </application>
 
+
+    <person>
+        <name>Claudia Leitinger</name>
+        <matrikelnummer>11844380</matrikelnummer>
+        <lastcommithash></lastcommithash>
+        <githubusername>claudialei</githubusername>
+        <repositoryname>0_Einzelbeispiel_Leitinger_se2</repositoryname>
+        <repositoryurl>https://github.com/claudialei/0_Einzelbeispiel_Leitinger_se2</repositoryurl>
+    </person>
 </manifest>
