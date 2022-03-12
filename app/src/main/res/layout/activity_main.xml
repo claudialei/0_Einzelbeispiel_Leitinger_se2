@@ -7,12 +7,82 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/tv_EingabeAufforderung"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="69dp"
+        android:layout_marginTop="160dp"
+        android:layout_marginEnd="69dp"
+        android:layout_marginBottom="52dp"
+        android:text="Gib deine Matrikelnummer ein:"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/et_mtrlNr"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_mtrlNr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="101dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="42dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/btn_abschicken"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_EingabeAufforderung" />
+
+    <Button
+        android:id="@+id/btn_abschicken"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="141dp"
+        android:layout_marginBottom="63dp"
+        android:text="Abschicken"
+        app:layout_constraintBottom_toTopOf="@+id/tv_antwortAufgabe"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_mtrlNr" />
+
+    <TextView
+        android:id="@+id/tv_antwortAufgabe"
+        android:layout_width="103dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="154dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="154dp"
+        android:layout_marginBottom="43dp"
+        android:text="antwort aufgabe"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/tv_antwortServer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_abschicken" />
+
+    <TextView
+        android:id="@+id/tv_antwortServer"
+        android:layout_width="94dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="154dp"
+        android:layout_marginTop="43dp"
+        android:layout_marginEnd="154dp"
+        android:layout_marginBottom="168dp"
+        android:text="Antwort Server"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_antwortAufgabe"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
