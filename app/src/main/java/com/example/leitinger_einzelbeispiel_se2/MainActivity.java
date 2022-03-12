@@ -69,4 +69,62 @@ public class MainActivity extends AppCompatActivity {
         }).start();
 
     }
+
+    public void aufgabe3 (String mtrlNr){
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                String answerA3 = getNumbers(mtrlNr);
+
+
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+
+                        TextView aufgabe3 = findViewById(R.id.tv_antwortAufgabe);
+                        aufgabe3.setText(answerA3);
+                        aufgabe3.setVisibility(View.VISIBLE);
+                    }
+                });
+            }
+
+        }).start();
+
+
+    }
+
+    public String getNumbers (String mtrlNr){
+        String answer;
+        for (int i = 0; i < mtrlNr.length(); i++){
+            for (int j = 0; j < mtrlNr.length(); j++){
+                if (i != j){
+                    int a = Character.getNumericValue(mtrlNr.charAt(i));
+                    int b = Character.getNumericValue(mtrlNr.charAt(j));
+
+                    int result = getggT(a, b);
+                    if (result > 1){
+                        return answer = "ggT von a (index: " + i +") und b (index: " + j + ") ist " + result;
+
+                    }
+                }
+
+            }
+        }
+        return "no ggT > 1 found";
+    }
+
+    public int getggT (int a, int b){
+        int rest = 0;
+        if (a == 0){
+            return b;
+        }
+        while (b != 0) {
+            rest = a % b;
+            a = b;
+            b = rest;
+        }
+
+        return a;
+    }
+
 }
