@@ -54,7 +54,7 @@
 
     <TextView
         android:id="@+id/tv_antwortAufgabe"
-        android:layout_width="103dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="154dp"
         android:layout_marginTop="40dp"
@@ -64,25 +64,23 @@
         android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@+id/tv_antwortServer"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_abschicken" />
 
     <TextView
         android:id="@+id/tv_antwortServer"
-        android:layout_width="94dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="154dp"
-        android:layout_marginTop="43dp"
+        android:layout_marginTop="9dp"
         android:layout_marginEnd="154dp"
-        android:layout_marginBottom="168dp"
+        android:layout_marginBottom="156dp"
         android:text="Antwort Server"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.444"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_antwortAufgabe"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_antwortAufgabe" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
