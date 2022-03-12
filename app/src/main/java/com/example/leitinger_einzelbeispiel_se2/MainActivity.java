@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 EditText mtrlNr = findViewById(R.id.et_mtrlNr);
                 sendToServer(mtrlNr.getText().toString() + "\n");
+                aufgabe2((mtrlNr.getText().toString()));
 
             }
         });
@@ -70,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void aufgabe3 (String mtrlNr){
+    public void aufgabe2 (String mtrlNr){
         new Thread(new Runnable() {
             @Override
             public void run() {
